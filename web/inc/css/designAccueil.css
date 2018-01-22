@@ -1,0 +1,84 @@
+
+body
+{
+    background: lightgray;
+}
+
+
+/*Design: ServletConnexion */
+h2.connexionTitle
+{
+    color: aliceblue;
+    font-style: normal;
+    size: 10px;
+    font-family: "Apple Chancery";
+
+}
+
+fieldset#pageConnexion
+{
+    display: block ;
+    border: double;
+    margin: 100px auto 0 ;
+    width: 35% ;
+    height:220px;
+    vertical-align: baseline;
+}
+
+fieldset#pageConnexion legend
+{
+    text-align: center;
+    color: firebrick;
+
+
+}
+
+fieldset#pageConnexion form#formConnexion
+{
+    text-align:center;
+    display:block;
+    width: 100%;
+    height:100%;
+
+}
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+
+label#usernameField
+{
+    display: inline-block;
+    width: 100%;
+    margin: 50px auto -10px ;
+}
+label#usernameField input
+{
+    width: 40%;
+}
+label#passwordField
+{
+    display: inline-block;
+    width: 100%;
+    margin: 30px auto ;
+
+}
+label#passwordField input
+{
+    width: 40%;
+}
+
+input#submitConnexion
+{
+    margin-left: 70%;
+    display: inline-block;
+    width: 100px;
+}
+.ErreurConnexion
+{
+    color: red ;
+    font-style: italic;
+}

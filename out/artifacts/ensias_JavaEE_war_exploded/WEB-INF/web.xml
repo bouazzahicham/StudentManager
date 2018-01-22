@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--Configuration JSP-->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <el-ignored>false</el-ignored>
+            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+            <include-coda>/WEB-INF/taglibs.jsp</include-coda>
+            <!--Pour inserer du code-->
+        </jsp-property-group>
+    </jsp-config>
+    <!--Fin configuration JSP-->
+
+
+
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>WebApp.Servlets.myServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/myServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>servletConnexion</servlet-name>
+        <servlet-class>WebApp.Servlets.connexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletConnexion</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>
