@@ -20,7 +20,7 @@ public class myServlet extends HttpServlet
     {
 
         System.out.println("On a atteint cette partie ");
-        req.getServletContext().getRequestDispatcher("/WEB-INF/site/index.jsp").forward(req,resp);
+        req.getServletContext().getRequestDispatcher("/WEB-INF/site/accueil.jsp").forward(req,resp);
     }
 
     @Override
