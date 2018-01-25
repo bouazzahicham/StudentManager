@@ -20,16 +20,16 @@
 
     <servlet>
         <servlet-name>myServlet</servlet-name>
-        <servlet-class>WebApp.Servlets.myServlet</servlet-class>
+        <servlet-class>WebApp.Servlets.Accueil</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>myServlet</servlet-name>
-        <url-pattern>/myServlet</url-pattern>
+        <url-pattern>/accueil</url-pattern>
     </servlet-mapping>
 
     <servlet>
         <servlet-name>servletConnexion</servlet-name>
-        <servlet-class>WebApp.Servlets.connexion</servlet-class>
+        <servlet-class>WebApp.Servlets.Connexion</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>servletConnexion</servlet-name>

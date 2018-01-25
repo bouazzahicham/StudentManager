@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by Hicham on 22/01/2018.
  */
-public class connexion extends HttpServlet
+public class Connexion extends HttpServlet
 {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
@@ -22,7 +22,7 @@ public class connexion extends HttpServlet
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
 
-// Gestion de la connexion
+// Gestion de la Connexion
 //        super.doPost(req, resp);
     }
 }

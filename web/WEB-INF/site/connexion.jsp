@@ -12,14 +12,16 @@
 <body>
 <%--B--%>
 
-<%--Cage de connexion--%>
+<%--Cage de Connexion--%>
 <fieldset id="pageConnexion" >
+
 <legend >Connexion :</legend>
     <form id="formConnexion">
         <label id="usernameField">Username : <input type="text" name="username" ></label>
         <label id="passwordField"> Password : <input type="password" name="password" ></label>
         <input type="submit" name="submitConnexion" id="submitConnexion">
     </form>
+
 </fieldset>
 
 

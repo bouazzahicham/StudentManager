@@ -8,6 +8,15 @@
 </head>
 
 <body>
+<div class="navigation">
+    <nav>
+        <a id="one" href="#">Accueil</a>
+        <a id="two" href="#">Inscription</a>
+        <a id="three" href="#3" >Jouer</a>
+        <a id="four" href="#4">Informations</a>
+    </nav>
 
+
+</div>
 </body>
 </html>

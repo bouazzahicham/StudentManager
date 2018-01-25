@@ -10,8 +10,8 @@ import java.io.IOException;
 /**
  * Created by Hicham on 22/01/2018.
  */
-//@WebServlet("/myServlet")
-public class myServlet extends HttpServlet
+//@WebServlet("/Accueil")
+public class Accueil extends HttpServlet
 {
 
 

@@ -1,7 +1,12 @@
 
+/*Couleur du bordel
+    background: rgba(232, 226, 223, 0.7);
+
+
+*/
 body
 {
-    background: lightgray;
+    background: rgba(206, 212, 229, 0.80);
 }
 
 
@@ -17,7 +22,12 @@ h2.connexionTitle
 
 fieldset#pageConnexion
 {
+    /*background-color: rgba(0, 145, 123, 0.47);*/
+
+    /*background-color: rgba(239, 175, 146, 0.51);*/
+    /*background-color: rgba(183, 10, 3, 0.5);*/
     display: block ;
+    background-color: rgba(186, 206, 232, 0.75);
     border: double;
     margin: 100px auto 0 ;
     width: 35% ;
