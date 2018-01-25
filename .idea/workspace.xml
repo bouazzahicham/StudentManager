@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22c9c024-88e6-4357-9de3-4071666726f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/site/connexion.jsp" afterPath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/site/connexion.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/classes/WebApp/Servlets/connexion.class" afterPath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/classes/WebApp/Servlets/connexion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/inc/css/designConnexion.css" afterPath="$PROJECT_DIR$/out/artifacts/ensias_JavaEE_war_exploded/inc/css/designConnexion.css" />
-    </list>
+    <list default="true" id="22c9c024-88e6-4357-9de3-4071666726f5" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -857,7 +851,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15723000" />
+    <option name="totallyTimeSpent" value="15780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
