@@ -13,7 +13,7 @@ import java.io.IOException;
 //@WebServlet("/Accueil")
 public class Accueil extends HttpServlet
 {
-
+//L'accueil
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
