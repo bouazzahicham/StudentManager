@@ -4,6 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+
+
+
+
+
     <!--Configuration JSP-->
     <jsp-config>
         <jsp-property-group>
@@ -16,6 +21,16 @@
     </jsp-config>
     <!--Fin configuration JSP-->
 
+
+    <session-config>
+        <session-timeout>-1</session-timeout>
+    </session-config>
+
+    <!--Le listener du DAO -->
+    <listener>
+        <listener-class>DAO.DAOConfig</listener-class>
+    </listener>
+    <!--Fin configuration du listener -->
 
 
     <servlet>

@@ -16,10 +16,10 @@
 <fieldset id="pageConnexion" >
 
 <legend >Connexion :</legend>
-    <form id="formConnexion">
+    <form method="post" id="formConnexion" action='<c:url value="/connexion" context="/"/>'>
         <label id="usernameField">Username : <input type="text" name="username" ></label>
         <label id="passwordField"> Password : <input type="password" name="password" ></label>
-        <input type="submit" name="submitConnexion" id="submitConnexion">
+        <input type="submit" name="submitConnexion" id="submitConnexion" >
     </form>
 
 </fieldset>
