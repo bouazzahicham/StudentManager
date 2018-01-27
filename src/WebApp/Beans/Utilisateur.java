@@ -18,6 +18,31 @@ public class Utilisateur
         this.id = id;
     }
 
+    public String getProfil()
+    {
+        return profil;
+    }
+
+    public long getId()
+    {
+        return id;
+    }
+
+    public String getNom()
+    {
+        return nom;
+    }
+
+    public String getPrenom()
+    {
+        return prenom;
+    }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
     public void setProfil(String profil)
     {
         this.profil = profil;
