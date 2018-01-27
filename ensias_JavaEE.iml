@@ -32,5 +32,13 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M221" level="application_server_libraries" />
     <orderEntry type="library" name="javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="bonecp-0.8.0.RELEASE" level="project" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="jquery-1.11.0" level="application" />
+    <orderEntry type="library" name="jquery-3.1.1.slim" level="application" />
+    <orderEntry type="library" name="tether" level="application" />
+    <orderEntry type="library" name="jquery-3.2.1.slim" level="application" />
+    <orderEntry type="library" name="popper" level="application" />
+    <orderEntry type="library" name="bonecp-0.8.0.RELEASE1" level="project" />
   </component>
 </module>

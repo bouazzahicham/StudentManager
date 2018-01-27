@@ -19,13 +19,18 @@ public class Accueil extends HttpServlet
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
 
-        System.out.println("On a atteint cette partie ");
-        req.getServletContext().getRequestDispatcher("/WEB-INF/site/accueil.jsp").forward(req,resp);
+        if(!req.getRequestURI().contains("#"))
+        {
+            System.out.println("On a atteint cette partie ");
+            req.getServletContext().getRequestDispatcher("/WEB-INF/site/accueil.jsp").forward(req, resp);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
     {
-        super.doPost(req, resp);
+
+
+
     }
 }
