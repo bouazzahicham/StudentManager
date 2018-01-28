@@ -14,6 +14,9 @@
 </head>
 
 <body>
+<jsp:include page="accueil.jsp"/>
+
+
 <%--B--%>
 <c:if test="${!empty erreursConnexion}">
 <fieldset id="pageErreur">

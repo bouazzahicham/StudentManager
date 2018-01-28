@@ -106,7 +106,14 @@ public class DAOFactory
         return new DAOUtilisateurImpl( this );
 
     }
-
+    public DAOGroupeImpl getGroupeDao()
+    {
+        return new DAOGroupeImpl(this);
+    }
+    public DAOSeanceImpl getSeanceDao()
+    {
+        return new DAOSeanceImpl(this);
+    }
 
 
 }
