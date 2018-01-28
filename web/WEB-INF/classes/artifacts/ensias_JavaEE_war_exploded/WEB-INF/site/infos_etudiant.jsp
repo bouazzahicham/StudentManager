@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<jsp:include page="accueil.jsp"/>
+<jsp:include page="sharedData.jsp"/>
 <article class="rightArticle">
     <div class="container">
 

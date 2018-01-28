@@ -1,102 +1,47 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<jsp:include page="sharedData.jsp" />
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE>
 <html>
 <head>
+    <link href="<c:url value="/inc/css/designFeed.css"/>" type="text/css" rel="stylesheet"/>
     <%--A nettoyer --%>
     <title>Page d'accueil </title>
-    <meta charset="utf-8" />
-    <script src="<c:url value="/inc/js/scripts.js" />"  type="text/javascript"></script>
-    <link href="<c:url value="/inc/css/designAccueil.css"/>" type="text/css" rel="stylesheet" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="<c:url value="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <meta charset="utf-8" />
 </head>
 
 <body>
-<nav id="navigation">
-    <div class="nav-side-menu">
-        <div class="brand">Student Manager </div>
-        <div class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></div>
-        <div class="menu-list">
-            <ul id="menu-content" class="menu-content collapse out">
-                <li>
-                    <a href="/accueil">
-                        <i class="fa fa-dashboard fa-lg"></i> Accueil
-                    </a>
-                </li>
-                <li>
-                    <a href="/appel">
-                        <i class="fa fa-user fa-lg"></i> Faire l'appel
-                    </a>
-                </li>
-
-
-
-                <li  data-toggle="collapse" data-target="#products" class="collapsed">
-                    <a><i class="fa fa-globe fa-lg"></i>Gestion d'evaluation <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="products">
-                    <li><a href="/infosevaluation">Gérer</a></li>
-                    <li><a href="/evaluation">Requete à l'administration </a></li>
-                </ul>
-
-
-                <%--<li data-toggle="collapse" data-target="#service" class="collapsed">--%>
-                <%--<a href="#"><i class="fa fa-globe fa-lg"></i> Gestion d'evaluation <span class="arrow"></span></a>--%>
-                <%--</li>--%>
-                <%--<ul class="sub-menu collapse" id="service">--%>
-                <%--<li>Gérer</li>--%>
-                <%--<li>Requetes </li>--%>
-                <%--</ul>--%>
-
-
-                <%--Conditionner avec le <c:if --%>
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="new">
-                    <li>#Gerer les groupes </li>
-                    <li>#Gerer les eleves </li>
-                    <li>#Gerer les seances</li>
-                    <li>#Gerer les comptes </li>
-
-                </ul>
-
-
-
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-users fa-lg"></i> Users
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-users fa-lg"></i> Se deconnecter
-                    </a>
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
 <article class="rightArticle">
-    <%--C'est cette partie qui sera redéfini pour toute les autres pages--%>
+
+    <h3>Page d'activitées : </h3>
+        <div class="activity-feed">
+            <div class="feed-item">
+                <div class="date">Sep 25</div>
+                <div class="text">Responded to need <a href="">“I'm a barby giirl”</a></div>
+            </div>
+            <div class="feed-item">
+                <div class="date">Sep 24</div>
+                <div class="text">Added an interest “Volunteer Activities”</div>
+            </div>
+            <div class="feed-item">
+                <div class="date">Sep 23</div>
+                <div class="text">Joined the group <a href="">“in a barbyyy wooorld</a></div>
+            </div>
+            <div class="feed-item">
+                <div class="date">Sep 21</div>
+                <div class="text">Responded to need <a href="">“life is plastic”</a></div>
+            </div>
+            <div class="feed-item">
+                <div class="date">Sep 18</div>
+                <div class="text">Created need <a href="">“hak sba3”</a></div>
+            </div>
+            <div class="feed-item">
+                <div class="date">Sep 17</div>
+                <div class="text">Attending the event <a href="">“ event”</a></div>
+            </div>
+        </div>
 </article>
 
 

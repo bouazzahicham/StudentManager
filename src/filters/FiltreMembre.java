@@ -24,6 +24,7 @@ public class FiltreMembre implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException
     {
+
         HttpServletRequest request = (HttpServletRequest) servletRequest ;
         HttpServletResponse response = (HttpServletResponse) servletResponse ;
             /* Non-filtrage des ressources statiques */
@@ -41,16 +42,16 @@ public class FiltreMembre implements Filter {
 
         if(utilisateur == null )
         {
-            if(chemin.equals("/servletConnexion"))
+            if(chemin.equals("/connexion"))
                 filterChain.doFilter(request,response);
             else
-                response.sendRedirect(request.getContextPath() + "/servletConnexion");
+                response.sendRedirect(request.getContextPath() + "/connexion");
         }
 
         else
         {
-            if(chemin.equals("/servletConnexion"))
-                response.sendRedirect("/servletClient");
+            if(chemin.equals("/connexion"))
+                response.sendRedirect("/accueil");
             else
                 filterChain.doFilter(request, response);
 
