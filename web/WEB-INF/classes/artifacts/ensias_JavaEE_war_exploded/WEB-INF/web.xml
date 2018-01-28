@@ -54,7 +54,7 @@
 
     <servlet>
         <servlet-name>servletAppel</servlet-name>
-        <servlet-class>WebApp.Servlets.Appel</servlet-class>
+        <servlet-class>WebApp.Servlets.test</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>servletAppel</servlet-name>

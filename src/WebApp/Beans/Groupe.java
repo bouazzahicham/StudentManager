@@ -6,15 +6,24 @@ package WebApp.Beans;
 
 public class Groupe {
 
-
-    String nom_groupe;
-
-    public String getNom_groupe() {
-        return nom_groupe;
+    Integer idGroupe;
+    String nomGroupe,descriptionGroupe;
+    public Integer getIdGroupe() {
+        return idGroupe;
     }
-
-    public void setNom_groupe(String nom_groupe) {
-        this.nom_groupe = nom_groupe;
+    public void setIdGroupe(Integer idGroupe) {
+        this.idGroupe = idGroupe;
     }
-
+    public String getNomGroupe() {
+        return nomGroupe;
+    }
+    public void setNomGroupe(String nomGroupe) {
+        this.nomGroupe = nomGroupe;
+    }
+    public String getDescriptionGroupe() {
+        return descriptionGroupe;
+    }
+    public void setDescriptionGroupe(String descriptionGroupe) {
+        this.descriptionGroupe = descriptionGroupe;
+    }
 }

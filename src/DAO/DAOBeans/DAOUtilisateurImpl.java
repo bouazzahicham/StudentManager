@@ -9,12 +9,11 @@ import DAO.DAOUtilitaire;
 import WebApp.Beans.Utilisateur;
 //import webApp.beans.Utilisateur;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class DAOUtilisateurImpl implements DAOUtilisateur
+public class DAOUtilisateurImpl
 {
     private static final String sql_select_login = "select * from Utilisateur where idUtilisateur = ? and motdePasse = ? ";
     private DAOFactory daoFactory;
@@ -24,7 +23,6 @@ public class DAOUtilisateurImpl implements DAOUtilisateur
     }
 
 
-    @Override
     public Utilisateur charger(Object... objets)
     {
         Utilisateur utilisateur = null;
@@ -84,6 +82,35 @@ public class DAOUtilisateurImpl implements DAOUtilisateur
         return utilisateur ;
 
     }
+
+
+
+    public List<Utilisateur> lister()
+    {
+        Statement st=null;
+        ResultSet resultat=null;
+        Connection con=null;
+
+        List<Utilisateur> users=new ArrayList<Utilisateur>();
+        try {
+            con=daoFactory.getConnection();
+            st=con.createStatement();
+            resultat=st.executeQuery("select * from profil;");
+            while(resultat.next())
+            {
+                Utilisateur user=new Utilisateur();
+                user.setNom(resultat.getString("nom"));
+                user.setId(resultat.getInt("id"));
+                user.setPrenom(resultat.getString("prenom"));
+                users.add(user);
+            }
+        }catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return users;
+    }
+
 
 
 }

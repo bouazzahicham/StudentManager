@@ -3,10 +3,7 @@ package DAO.DAOBeans;
 import DAO.DAOFactory;
 import WebApp.Beans.Groupe;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,36 +12,64 @@ import java.util.List;
  */
 public class DAOGroupeImpl
 {
-    private DAOFactory daoFactory;
-    Statement st=null;
+    DAOFactory df;
+    PreparedStatement st=null;
     ResultSet resultat=null;
     Connection con=null;
 
-    public DAOGroupeImpl(DAOFactory daoFactory)
-    {
-        this.daoFactory = daoFactory;
+    public DAOGroupeImpl(DAOFactory DF)
 
-    }
-    public List<Groupe> lister()
     {
-        List<Groupe> groups=new ArrayList<Groupe>();
+        this.df=DF;
+    }
+
+    public List<Groupe> lister_user(Integer idutilisateur)
+    {
+        List<Groupe> groupes=new ArrayList<Groupe>();
         try {
-            con=daoFactory.getConnection();
-            st=con.createStatement();
-            resultat=st.executeQuery("select * from groupe;");
+            con=df.getConnection();
+            st=con.prepareStatement("select * from view2 where idUtilisateur=?;");
+            st.setInt(1,idutilisateur);
+            resultat=st.executeQuery();
             while(resultat.next())
             {
-                Groupe group=new Groupe();
-                group.setNom_groupe(resultat.getString("nom_groupe"));
-                groups.add(group);
-
+                Groupe groupe=new Groupe();
+                groupe.setIdGroupe(resultat.getInt("idGroupe"));
+                groupe.setNomGroupe(resultat.getString("nomGroupe"));
+                groupe.setDescriptionGroupe(resultat.getString("descriptionGroupe"));
+                groupes.add(groupe);
             }
         }catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return groups;
+        return groupes;
     }
+
+    public List<Groupe> lister()
+    {
+        List<Groupe> groupes=new ArrayList<Groupe>();
+        try {
+            con=df.getConnection();
+            st=con.prepareStatement("select * from groupe");
+            resultat=st.executeQuery();
+            while(resultat.next())
+            {
+                Groupe groupe=new Groupe();
+                groupe.setIdGroupe(resultat.getInt("idGroupe"));
+                groupe.setNomGroupe(resultat.getString("nomGroupe"));
+                groupes.add(groupe);
+            }
+        }catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return groupes;
+    }
+
+
+
+
 
 
 }

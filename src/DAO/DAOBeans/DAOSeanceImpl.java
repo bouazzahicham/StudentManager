@@ -4,10 +4,7 @@ import DAO.DAOFactory;
 import WebApp.Beans.Groupe;
 import WebApp.Beans.Seance;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,38 +14,45 @@ import java.util.List;
 public class DAOSeanceImpl
 {
 
-    private DAOFactory daoFactory;
-    Statement st=null;
+    private DAOFactory df;
+    PreparedStatement st=null;
     ResultSet resultat=null;
     Connection con=null;
-    public DAOSeanceImpl(DAOFactory daoFactory)
-    {
-        this.daoFactory = daoFactory;
 
+    public DAOSeanceImpl(DAOFactory DF)
+    {
+        this.df=DF;
     }
 
-
-    public List<Seance> lister()
+    public List<Seance> lister(Integer idutilisateur,Integer idgroupe)
     {
         List<Seance> seances=new ArrayList<Seance>();
         try {
-            con=daoFactory.getConnection();
-            st=con.createStatement();
-            resultat=st.executeQuery("select * from seance ;");
+            con=df.getConnection();
+            st=con.prepareStatement("select * from view1 where  idUtilisateur=? and idGroupe=?;");
+            st.setInt(1,idutilisateur);
+            st.setInt(2, idgroupe);
+            resultat=st.executeQuery();
 
             while(resultat.next())
             {
                 Seance seance=new Seance();
-                seance.setNom_seance(resultat.getString("nom_seance"));
+                seance.setIdSeance(resultat.getInt("idSeance"));
+                seance.setDateSeance(resultat.getString("dateSeance"));
+                seance.setDureeSeance(resultat.getString("dureeSeance"));
+                seance.setNomProprietaire(resultat.getString("nomProprietaire"));
+                seance.setApp(resultat.getString("Appel"));
+                seance.setCreneauGroupe(resultat.getString("creneauGroupe"));
+                seance.setNomGroupe(resultat.getString("nomGroupe"));
                 seances.add(seance);
             }
         }catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
         return seances;
     }
+
 
 
 }

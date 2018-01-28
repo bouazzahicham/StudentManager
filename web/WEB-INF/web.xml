@@ -60,7 +60,31 @@
         <servlet-name>servletAppel</servlet-name>
         <url-pattern>/appel</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>infosgroupe</servlet-name>
+        <servlet-class>WebApp.Servlets.infosGroupe_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>infosgroupe</servlet-name>
+        <url-pattern>/infosgroupe</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>infosetudiant</servlet-name>
+        <servlet-class>WebApp.Servlets.infosEtudiant_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>infosetudiant</servlet-name>
+        <url-pattern>/infosetudiant</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>infosevaluation</servlet-name>
+        <servlet-class>WebApp.Servlets.infosEvaluation_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>infosevaluation</servlet-name>
+        <url-pattern>/infosevaluation</url-pattern>
+    </servlet-mapping>
+</web-app>
 
 
 

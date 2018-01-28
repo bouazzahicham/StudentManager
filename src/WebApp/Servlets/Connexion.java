@@ -1,22 +1,17 @@
 package WebApp.Servlets;
 
-import DAO.DAOBeans.DAOUtilisateur;
 import DAO.DAOBeans.DAOUtilisateurImpl;
 import DAO.DAOFactory;
-import DAO.DAOUtilitaire;
 import WebApp.Beans.Utilisateur;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Hicham on 22/01/2018.

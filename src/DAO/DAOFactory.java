@@ -102,7 +102,7 @@ public class DAOFactory
 
 
 
-    public DAOUtilisateur getUtilisateurDao() {
+    public DAOUtilisateurImpl getUtilisateurDao() {
         return new DAOUtilisateurImpl( this );
 
     }
@@ -110,10 +110,30 @@ public class DAOFactory
     {
         return new DAOGroupeImpl(this);
     }
+
     public DAOSeanceImpl getSeanceDao()
     {
         return new DAOSeanceImpl(this);
     }
+
+    public EleveImpl geteleveImpl()
+    {
+        return new EleveImpl(this);
+    }
+
+    public historiqueImpl gethistoImpl()
+    {
+        return new historiqueImpl(this);
+    }
+    public AbsenceImpl getabImpl()
+    {
+        return new AbsenceImpl(this);
+    }
+    public EvaluationImpl getevaluationImpl()
+    {
+        return new EvaluationImpl(this);
+    }
+
 
 
 }
