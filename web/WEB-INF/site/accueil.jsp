@@ -44,10 +44,10 @@
 
 
                 <li  data-toggle="collapse" data-target="#products" class="collapsed">
-                    <a href=""><i class="fa fa-globe fa-lg"></i>Gestion d'evaluation <span class="arrow"></span></a>
+                    <a><i class="fa fa-globe fa-lg"></i>Gestion d'evaluation <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="products">
-                    <li><a href="/evaluation">Gérer</a></li>
+                    <li><a href="/infosevaluation">Gérer</a></li>
                     <li><a href="/evaluation">Requete à l'administration </a></li>
                 </ul>
 
@@ -63,7 +63,7 @@
 
                 <%--Conditionner avec le <c:if --%>
                 <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a href=""><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
+                    <a><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="new">
                     <li>#Gerer les groupes </li>

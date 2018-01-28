@@ -15,3 +15,19 @@ $(document).ready(function(){
         document.getElementById("seance").submit();
     });
 });
+
+$(document).ready(function(){
+    $("#groupetds").change(function(){
+        $("#groupe_tds").submit();
+    });
+});
+
+$(document).ready(function(){
+    $("#seances").change(function(){
+        $("#seance").submit();
+    });
+});
+
+$(document).ready(function() {
+    $('#example').DataTable();
+});

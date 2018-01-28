@@ -43,7 +43,7 @@ public class infosEtudiant_servlet extends HttpServlet {
 		mysession.setAttribute("absences",absences.lister(ideleve));
 		mysession.setAttribute("evaluations",evaluations.lister_eleve(ideleve));
 		mysession.setAttribute("ideleve",ideleve);
-		this.getServletContext().getRequestDispatcher("/WEB-INF/infos_etudiant.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_etudiant.jsp").forward(request, response);
 	}
 
 	 

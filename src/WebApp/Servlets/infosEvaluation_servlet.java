@@ -35,7 +35,7 @@ public class infosEvaluation_servlet extends HttpServlet
         mysession=request.getSession();
         mysession.setAttribute("groupes",groupes.lister());
         mysession.setAttribute("evaluations",evaluations.lister());
-        this.getServletContext().getRequestDispatcher("/WEB-INF/infos_evaluation.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,7 +48,7 @@ public class infosEvaluation_servlet extends HttpServlet
             mysession.setAttribute("eleves", eva_eleves.lister_groupe(idGroupe,idevaluation));
         }
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/infos_evaluation.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);
     }
 
 }

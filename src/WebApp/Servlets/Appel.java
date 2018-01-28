@@ -33,12 +33,16 @@ public class Appel extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         mysession=request.getSession();
+
+//        A modifier pour ajouter l'id de l'utilisatuer connecté
         mysession.setAttribute("groupes",groupes.lister_user(1));/* r�cup�ration du  parametre(id_utilisateur) apres authentification */
 
 
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/site/appel.jsp").forward(request, response);
     }
 
 
@@ -58,7 +62,7 @@ public class Appel extends HttpServlet {
         mysession.setAttribute("eleves",eleves.lister(idgroupe));
 
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/site/appel.jsp").forward(request, response);
     }
 
 

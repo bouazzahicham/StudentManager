@@ -51,6 +51,29 @@ public class Connexion extends HttpServlet
         try
         {
             utilisateur = DAO_utilisateur.charger(idUtilisateur, password);
+            if (utilisateur != null)
+            {
+                if (utilisateur.getProfil().equals("-1"))
+                {
+                    erreursConnexion.add("Erreur : Compte non autorisé à se connecter");
+                    this.getServletContext().getRequestDispatcher("/WEB-INF/site/connexion.jsp").forward(req,resp);
+
+                }
+                else
+                {
+                    HttpSession session = req.getSession();
+                    session.setAttribute("utilisateur",utilisateur);
+                    resp.sendRedirect(req.getContextPath()+"/accueil");
+                }
+
+            }
+            else
+            {
+                erreursConnexion.add("Erreur de compte : Username/Password incorrects !");
+                this.getServletContext().getRequestDispatcher("/WEB-INF/site/connexion.jsp").forward(req,resp);
+
+            }
+
         } catch (NullPointerException excception)
         {
             erreursConnexion.add("ErreurBDD : Erreur lors de la connexion avec la base de donnée ");
@@ -58,28 +81,7 @@ public class Connexion extends HttpServlet
 
         System.out.println("L'objet utilisateur : \n \t" + utilisateur);
 
-        if (utilisateur != null)
-        {
-            if (utilisateur.getProfil().equals("-1"))
-            {
-                erreursConnexion.add("Erreur : Compte non autorisé à se connecter");
-                this.getServletContext().getRequestDispatcher("/WEB-INF/site/connexion.jsp").forward(req,resp);
 
-            }
-            else
-            {
-                HttpSession session = req.getSession();
-            session.setAttribute("utilisateur",utilisateur);
-            resp.sendRedirect(req.getContextPath()+"/accueil");
-            }
-
-        }
-        else
-        {
-            erreursConnexion.add("Erreur de compte : Username/Password incorrects !");
-            this.getServletContext().getRequestDispatcher("/WEB-INF/site/connexion.jsp").forward(req,resp);
-
-        }
 
         for (String e : erreursConnexion)
         {

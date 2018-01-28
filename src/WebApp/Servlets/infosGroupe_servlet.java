@@ -25,20 +25,22 @@ public class infosGroupe_servlet extends HttpServlet {
         super();
     }
     
-    public void init() throws ServletException {
+    public void init() throws ServletException
+	{
 		DAOFactory daofact=DAOFactory.getInstance();
     	this.seances=daofact.getSeanceDao();
     	this.eleves=daofact.geteleveImpl();
     	this.histo=daofact.gethistoImpl();
     }
 	 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
 		Integer idgroupe=Integer.parseInt(request.getParameter("idgroupe"));
 		mysession=request.getSession();
 		mysession.setAttribute("eleves",eleves.lister(idgroupe));
 		mysession.setAttribute("seances",seances.lister(1,idgroupe));/* recup�ration du premier parametre(id_utilisateur) apres authentfication*/
 		mysession.setAttribute("histo",histo.lister_groupe(idgroupe));
-		this.getServletContext().getRequestDispatcher("/WEB-INF/infos_groupe.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_groupe.jsp").forward(request, response);
 	}
 
 	 
