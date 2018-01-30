@@ -87,6 +87,24 @@
         <url-pattern>/infosevaluation</url-pattern>
     </servlet-mapping>
 
+
+
+    <!-- lolipop -->
+
+    <servlet>
+        <servlet-name>GestionEleve</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionEleve</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionEleve</servlet-name>
+        <url-pattern>/gestionEleve</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
     <servlet>
         <servlet-name>Deconnexion</servlet-name>
         <servlet-class>WebApp.Servlets.ServletDeconnexion</servlet-class>

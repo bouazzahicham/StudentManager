@@ -8,6 +8,9 @@
 
 <%--J'ai remplace index par Gestion--%>
 <body>
+
+
+
 <article class="rightArticle">
     <div class="container">
 

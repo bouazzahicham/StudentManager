@@ -4,7 +4,6 @@
 <html>
 <head>
     <%--A nettoyer --%>
-    <title>Page d'accueil </title>
     <meta charset="utf-8" />
     <script src="<c:url value="/inc/js/scripts.js" />"  type="text/javascript"></script>
     <link href="<c:url value="/inc/css/designAccueil.css"/>" type="text/css" rel="stylesheet" />
@@ -24,6 +23,8 @@
 </head>
 
 <body>
+
+
 <nav id="navigation">
     <div class="nav-side-menu">
         <div class="brand">Student Manager </div>
@@ -66,8 +67,8 @@
                     <a><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="new">
+                    <li><a href="/gestionEleve?Ajouter"> #Gerer les eleves </a></li>
                     <li>#Gerer les groupes </li>
-                    <li>#Gerer les eleves </li>
                     <li>#Gerer les seances</li>
                     <li>#Gerer les comptes </li>
 
@@ -83,7 +84,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="/deconnexion">
                         <i class="fa fa-users fa-lg"></i> Se deconnecter
                     </a>
                 </li>
@@ -95,11 +96,6 @@
 </nav>
 
 
-<article class="rightArticle" id="rightArticle">
-    <p> Message d'accueil </p>
-
-    <%--C'est cette partie qui sera redéfini pour toute les autres pages--%>
-</article>
 
 
 </body>

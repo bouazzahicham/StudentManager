@@ -40,5 +40,7 @@
     <orderEntry type="library" name="jquery-3.2.1.slim" level="application" />
     <orderEntry type="library" name="popper" level="application" />
     <orderEntry type="library" name="bonecp-0.8.0.RELEASE1" level="project" />
+    <orderEntry type="library" name="console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd" level="application" />
+    <orderEntry type="library" name="stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e" level="application" />
   </component>
 </module>

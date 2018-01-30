@@ -196,3 +196,58 @@ div.body
     margin-top : 10px;
     margin-right:1px;
 }
+
+/* Add a black background color to the top navigation */
+.topnav {
+    height:50px;
+
+    border: gray 1px solid ;
+    border-radius: 7px;
+    margin-top: -10px;
+    text-align: center ;
+    top: 0 ;
+    margin-left: -13px;
+    margin-right: -11px;
+    background-color: #e7e7e7;
+
+    /*background-color: #333;*/
+    overflow: hidden;
+}
+/*.topnav {*/
+    /*border:  1px solid #039e81;*/
+    /*border-radius: 7px;*/
+    /*margin-top: -10px;*/
+    /*text-align: center ;*/
+    /*top: 0 ;*/
+    /*margin-left: -13px;*/
+    /*margin-right: -11px;*/
+    /*background-color: rgba(3, 168, 138, 0.51);*/
+
+    /*!*background-color: #333;*!*/
+    /*overflow: hidden;*/
+/*}*/
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    height:50px;
+    width: 25%;
+    float: left;
+    color: #00255a;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}

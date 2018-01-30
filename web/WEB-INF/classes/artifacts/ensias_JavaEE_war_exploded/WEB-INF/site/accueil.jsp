@@ -13,6 +13,10 @@
 </head>
 
 <body>
+<article class="rightArticle" id="rightArticle">
+    <p> Message d'accueil </p>
+    <%--C'est cette partie qui sera redéfini pour toute les autres pages--%>
+</article>
 <article class="rightArticle">
 
     <h3>Page d'activitées : </h3>

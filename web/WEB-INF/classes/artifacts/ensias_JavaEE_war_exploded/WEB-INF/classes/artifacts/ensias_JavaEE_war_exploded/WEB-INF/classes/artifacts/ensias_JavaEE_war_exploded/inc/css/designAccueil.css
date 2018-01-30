@@ -199,7 +199,7 @@ div.body
 
 /* Add a black background color to the top navigation */
 .topnav {
-    height:50px;
+    height:40px;
 
     border: gray 1px solid ;
     border-radius: 7px;
@@ -230,7 +230,7 @@ div.body
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    height:50px;
+    height:30px;
     width: 25%;
     float: left;
     color: #00255a;

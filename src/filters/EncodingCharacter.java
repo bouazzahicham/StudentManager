@@ -5,9 +5,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Created by Hicham on 23/08/2017.
- */
 public class EncodingCharacter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException
