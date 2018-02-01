@@ -1,25 +1,59 @@
 package WebApp.Beans;
 
 public class  Eleve{
-	
-	Integer idEleve;
-	String nomEleve,prenomEleve;
-	public Integer getIdEleve() {
-		return idEleve;
-	}
-	public void setIdEleve(Integer idEleve) {
-		this.idEleve = idEleve;
-	}
-	public String getNomEleve() {
-		return nomEleve;
-	}
-	public void setNomEleve(String nomEleve) {
-		this.nomEleve = nomEleve;
-	}
-	public String getPrenomEleve() {
-		return prenomEleve;
-	}
-	public void setPrenomEleve(String prenomEleve) {
-		this.prenomEleve = prenomEleve;
-	}
+
+    private Integer idEleve;
+    private String nomEleve,prenomEleve;
+    private Integer idGroupe ;
+    private String telephoneEleve;
+
+    public Integer getIdEleve()
+    {
+        return idEleve;
+    }
+
+    public void setIdEleve(Integer idEleve)
+    {
+        this.idEleve = idEleve;
+    }
+
+    public String getNomEleve()
+    {
+        return nomEleve;
+    }
+
+    public void setNomEleve(String nomEleve)
+    {
+        this.nomEleve = nomEleve;
+    }
+
+    public String getPrenomEleve()
+    {
+        return prenomEleve;
+    }
+
+    public void setPrenomEleve(String prenomEleve)
+    {
+        this.prenomEleve = prenomEleve;
+    }
+
+    public Integer getIdGroupe()
+    {
+        return idGroupe;
+    }
+
+    public void setIdGroupe(Integer idGroupe)
+    {
+        this.idGroupe = idGroupe;
+    }
+
+    public String getTelephoneEleve()
+    {
+        return telephoneEleve;
+    }
+
+    public void setTelephoneEleve(String telephoneEleve)
+    {
+        this.telephoneEleve = telephoneEleve;
+    }
 }

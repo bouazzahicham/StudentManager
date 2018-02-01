@@ -53,7 +53,7 @@ public class Connexion extends HttpServlet
             utilisateur = DAO_utilisateur.charger(idUtilisateur, password);
             if (utilisateur != null)
             {
-                if (utilisateur.getProfil().equals("-1"))
+                if (utilisateur.getIdProfil().equals("-1"))
                 {
                     erreursConnexion.add("Erreur : Compte non autorisé à se connecter");
                     this.getServletContext().getRequestDispatcher("/WEB-INF/site/connexion.jsp").forward(req,resp);

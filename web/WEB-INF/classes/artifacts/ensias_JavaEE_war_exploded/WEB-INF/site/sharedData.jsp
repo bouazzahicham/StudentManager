@@ -26,88 +26,87 @@
 
 
 <nav id="navigation">
-    <div class="nav-side-menu">
-        <div class="brand">Student Manager </div>
-        <div class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></div>
-        <div class="menu-list">
-            <ul id="menu-content" class="menu-content collapse out">
-                <li>
-                    <a href="/accueil">
-                        <i class="fa fa-dashboard fa-lg"></i> Accueil
-                    </a>
-                </li>
-                <li>
-                    <a href="/appel">
-                        <i class="fa fa-user fa-lg"></i> Faire l'appel
-                    </a>
-                </li>
+<div class="nav-side-menu">
+<div class="brand">Student Manager </div>
+<div class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></div>
+<div class="menu-list">
+<ul id="menu-content" class="menu-content collapse out">
+<li>
+    <a href="/accueil">
+        <i class="fa fa-dashboard fa-lg"></i> Accueil
+    </a>
+</li>
+<li>
+    <a href="/appel">
+        <i class="fa fa-user fa-lg"></i> Faire l'appel
+    </a>
+</li>
 
 
 
-                <li  data-toggle="collapse" data-target="#products" class="collapsed">
-                    <a><i class="fa fa-globe fa-lg"></i>Gestion d'evaluation <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="products">
-                    <li><a href="/infosevaluation">Gérer</a></li>
-                    <li><a href="/evaluation">Requete à l'administration </a></li>
-                </ul>
+<li  data-toggle="collapse" data-target="#products" class="collapsed">
+    <a><i class="fa fa-globe fa-lg"></i>Gestion d'evaluation <span class="arrow"></span></a>
+</li>
+<ul class="sub-menu collapse" id="products">
+    <li><a href="/infosevaluation">Gérer</a></li>
+    <%--<li><a href="/evaluation">Requete à l'administration </a></li>--%>
+</ul>
 
 
-                <%--<li data-toggle="collapse" data-target="#service" class="collapsed">--%>
-                <%--<a href="#"><i class="fa fa-globe fa-lg"></i> Gestion d'evaluation <span class="arrow"></span></a>--%>
-                <%--</li>--%>
-                <%--<ul class="sub-menu collapse" id="service">--%>
-                <%--<li>Gérer</li>--%>
-                <%--<li>Requetes </li>--%>
-                <%--</ul>--%>
+<%--<li data-toggle="collapse" data-target="#service" class="collapsed">--%>
+<%--<a href="#"><i class="fa fa-globe fa-lg"></i> Gestion d'evaluation <span class="arrow"></span></a>--%>
+<%--</li>--%>
+<%--<ul class="sub-menu collapse" id="service">--%>
+<%--<li>Gérer</li>--%>
+<%--<li>Requetes </li>--%>
+<%--</ul>--%>
+
+<c:if test="${sessionScope.utilisateur.idProfil == 1}">
+        <%--Conditionner avec le <c:if --%>
+        <li data-toggle="collapse" data-target="#new" class="collapsed">
+            <a><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
+        </li>
+        <ul class="sub-menu collapse" id="new">
+            <li><a href="/gestionEleve?Ajouter"> #Gerer les eleves </a></li>
+            <li><a href="/gestionGroupe?Ajouter">#Gerer les groupes </a></li>
+            <li>#Gerer les seances</li>
+            <li><a href="/gestionUtilisateur?Rechercher">#Gerer les utilisateurs </a></li>
+
+        </ul>
 
 
-                <%--Conditionner avec le <c:if --%>
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a><i class="fa fa-car fa-lg"></i> ~Panneau d'administration  <span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="new">
-                    <li><a href="/gestionEleve?Ajouter"> #Gerer les eleves </a></li>
-                    <li>#Gerer les groupes </li>
-                    <li>#Gerer les seances</li>
-                    <li>#Gerer les comptes </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-users fa-lg"></i> Users
+            </a>
+        </li>
+</c:if>
 
-                </ul>
-
-
-
-
-                <li>
-                    <a href="#">
-                        <i class="fa fa-users fa-lg"></i> Users
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/deconnexion">
-                        <i class="fa fa-users fa-lg"></i> Se deconnecter
-                    </a>
-                </li>
+    <li>
+    <a href="/deconnexion">
+    <i class="fa fa-users fa-lg"></i> Se deconnecter
+    </a>
+    </li>
 
 
-            </ul>
-        </div>
+    </ul>
     </div>
-</nav>
+    </div>
+    </nav>
 
 
 
 
-</body>
+    </body>
 
 
 
-<footer>
+    <footer>
 
 
 
-</footer>
+    </footer>
 
 
 
-</html>
+    </html>

@@ -33,19 +33,21 @@ public class infosEvaluation_servlet extends HttpServlet
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         mysession=request.getSession();
-        mysession.setAttribute("groupes",groupes.lister());
-        mysession.setAttribute("evaluations",evaluations.lister());
+
+        request.setAttribute("groupes",groupes.lister());
+        request.setAttribute("evaluations",evaluations.lister());
         this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if(request.getParameter("groupetds")!=null && request.getParameter("evaluations")!=null) {
+        if(request.getParameter("groupetds")!=null && request.getParameter("evaluations")!=null)
+        {
             idGroupe=Integer.parseInt(request.getParameter("groupetds"));
             idevaluation=Integer.parseInt(request.getParameter("evaluations"));
-            mysession.setAttribute("grselect", idGroupe);
-            mysession.setAttribute("evselect", idevaluation);
-            mysession.setAttribute("eleves", eva_eleves.lister_groupe(idGroupe,idevaluation));
+            request.setAttribute("grselect", idGroupe);
+            request .setAttribute("evselect", idevaluation);
+            request.setAttribute("eleves", eva_eleves.lister_groupe(idGroupe,idevaluation));
         }
 
         this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);

@@ -2,7 +2,6 @@
 <jsp:include page="sharedData.jsp"/>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Gestion groupe </title>
 </head>
 
@@ -11,7 +10,7 @@
 
 
 
-<article class="rightArticle">
+<article class="rightArticle" style="text-align: left; ">
     <div class="container">
 
 
@@ -27,7 +26,7 @@
     </form>
 
 
-        Veuillez choisir une s�ance:	<form method="post" action="appel" id="seance">
+        Veuillez choisir une seance :	<form method="post" action="appel" id="seance">
         <select class="form-control" name="seances" id="seances">
             <option></option>
             <c:if test="${not empty seances}">
@@ -38,11 +37,15 @@
         </select>
     </form>
         <br><br>
-        <h3><b>S�l�ctionn�: Groupe <a href="infosgroupe?idgroupe=${grselect}"  id="mine"></a>/ S�ance du<a href="" id="mo"> </a></b></h3>
-        <form method="post" action="infosetudiant" name="etudiants_groupe" id="etudiants_groupe">
+        <h3><b>Selectionner : Groupe <a href="infosgroupe?idgroupe=${grselect}"  id="mine"></a>/ Seance  du<a href="" id="mo"> </a></b></h3>
+        <form method="post" action="/students" name="etudiants_groupe" id="etudiants_groupe">
             <div class="form-group">
                 <br><br>
+                <input name="seasel" id="seasel" type="hidden" value=""></input>
+                <input name="myids" id="myids" type="hidden" value=""></input>
                 <table id="example"  class="table table-striped table-bordered" width="100%" cellspacing="0">
+
+
 
                     <thead>
                     <tr>
@@ -57,7 +60,7 @@
                     <c:if test="${not empty eleves}">
                         <c:forEach items="${eleves}"  var="eleve"  varStatus="status">
                             <tr>
-                                <td><a href="infosetudiant?ideleve=${eleve.idEleve}"> ${eleve.idEleve}</a></td>
+                                <td><a href="infosetudiant?ideleve=${eleve.idEleve}"><id>${eleve.idEleve}</id></a></td>
                                 <td>${eleve.nomEleve}</td>
                                 <td>${eleve.prenomEleve}</td>
                                 <td><label class='switch'> <input class='switch-input' type='checkbox' id='check'/> <span class='switch-label'data-on='OUI' data-off='NON'></span>  <span class='switch-handle'></span>  </label>
@@ -67,7 +70,7 @@
                     </c:if>
                     </tbody>
                 </table>
-                <input type="submit" class="btn btn-primary" value="Submit Button">
+                <input type="submit" class="btn btn-primary" value="Submit Button" onclick="mok()">
             </div>
         </form>
     </div>
@@ -95,7 +98,7 @@
         <script>
             $(document).ready(function(){
                 $("#etudiants_groupe").submit(function(event){
-                    alert("veuillez choisir une s�ance svp!");
+                    alert("veuillez choisir une seance : ");
                     event.preventDefault();
                 });
 
@@ -123,6 +126,25 @@
             $("#mo").append($("#seances option[value='${seancesel}'").text()) ;
         </script>
     </c:if>
+
+    <script>
+        function mok()
+        {
+            var table = document.getElementById("example");
+            checkbox = table.getElementsByTagName("input");
+            id=table.getElementsByTagName("id");
+            var myids="";
+            for(var indexCheckbox = 0; indexCheckbox<checkbox.length; indexCheckbox++)
+            {
+                if(checkbox[indexCheckbox].checked)
+                {
+                    myids=myids+id[indexCheckbox].innerHTML+',';
+                }
+            }
+            document.getElementById("myids").setAttribute("value",myids);
+            document.getElementById("seasel").setAttribute("value","${seancesel}");
+        }
+    </script>
 
 
 </article>

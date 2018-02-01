@@ -23,23 +23,23 @@
         <div class="activity-feed">
             <div class="feed-item">
                 <div class="date">Sep 25</div>
-                <div class="text">Responded to need <a href="">“I'm a barby giirl”</a></div>
+                <div class="text">Nouvelle 1 :  <a href="http://ensias.ma"> ensias.ma</a></div>
             </div>
             <div class="feed-item">
                 <div class="date">Sep 24</div>
-                <div class="text">Added an interest “Volunteer Activities”</div>
+                <div class="text">Nouvelle 2 : JavaEE a 11h  </div>
             </div>
             <div class="feed-item">
                 <div class="date">Sep 23</div>
-                <div class="text">Joined the group <a href="">“in a barbyyy wooorld</a></div>
+                <div class="text"><a href="">“Life is plastic</a></div>
             </div>
             <div class="feed-item">
                 <div class="date">Sep 21</div>
-                <div class="text">Responded to need <a href="">“life is plastic”</a></div>
+                <div class="text"> <a href="">“life is fantastic”</a></div>
             </div>
             <div class="feed-item">
                 <div class="date">Sep 18</div>
-                <div class="text">Created need <a href="">“hak sba3”</a></div>
+                <div class="text"><a href="">You can brush my hair </a></div>
             </div>
             <div class="feed-item">
                 <div class="date">Sep 17</div>

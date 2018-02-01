@@ -87,8 +87,14 @@
         <url-pattern>/infosevaluation</url-pattern>
     </servlet-mapping>
 
-
-
+    <servlet>
+        <servlet-name>students</servlet-name>
+        <servlet-class>WebApp.Servlets.Students</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>students</servlet-name>
+    <url-pattern>/students</url-pattern>
+    </servlet-mapping>
     <!-- lolipop -->
 
     <servlet>
@@ -100,9 +106,24 @@
         <url-pattern>/gestionEleve</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GestionGroupe</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionGroupe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionGroupe</servlet-name>
+        <url-pattern>/gestionGroupe</url-pattern>
+    </servlet-mapping>
 
 
-
+    <servlet>
+        <servlet-name>GestionUtilisateur</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionUtilisateur</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionUtilisateur</servlet-name>
+        <url-pattern>/gestionUtilisateur</url-pattern>
+    </servlet-mapping>
 
 
     <servlet>

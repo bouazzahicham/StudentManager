@@ -87,20 +87,69 @@
         <url-pattern>/infosevaluation</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>students</servlet-name>
+        <servlet-class>WebApp.Servlets.Students</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>students</servlet-name>
+    <url-pattern>/students</url-pattern>
+    </servlet-mapping>
+    <!-- lolipop -->
+
+    <servlet>
+        <servlet-name>GestionEleve</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionEleve</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionEleve</servlet-name>
+        <url-pattern>/gestionEleve</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GestionGroupe</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionGroupe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionGroupe</servlet-name>
+        <url-pattern>/gestionGroupe</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>AjoutGroupe</servlet-name>
+        <servlet-class>WebApp.Servlets.GestionGroupe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjoutGroupe</servlet-name>
+        <url-pattern>/gestionGroupe</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Deconnexion</servlet-name>
+        <servlet-class>WebApp.Servlets.ServletDeconnexion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Deconnexion</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
 
 
 
     <!--Filtres-->
 
     <!--Filter Restriction-->
-    <!--<filter>-->
-        <!--<filter-name>Restriction</filter-name>-->
-        <!--<filter-class>filters.FiltreMembre</filter-class>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-        <!--<filter-name>Restriction</filter-name>-->
-        <!--<url-pattern>/*</url-pattern>-->
-    <!--</filter-mapping>-->
+    <filter>
+        <filter-name>Restriction</filter-name>
+        <filter-class>filters.FiltreMembre</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Restriction</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     <!--#END#Filter-->
 
 

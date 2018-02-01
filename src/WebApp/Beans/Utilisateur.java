@@ -7,60 +7,70 @@ public class Utilisateur
 {
 
 
-    private String profil;
-    private long id;
-    private String nom;
-    private String prenom;
-    private String description;
+    private String idProfil;
+    private String motdePasse;
+    private String idUtilisateur;
+    private String nomProprietaire;
+    private String prenomProprietaire;
+    private String descriptionUtilisateur;
 
-    public void setId(long id)
+    public String getIdProfil()
     {
-        this.id = id;
+        return idProfil;
     }
 
-    public String getProfil()
+    public void setIdProfil(String idProfil)
     {
-        return profil;
+        this.idProfil = idProfil;
     }
 
-    public long getId()
+    public String getMotdePasse()
     {
-        return id;
+        return motdePasse;
     }
 
-    public String getNom()
+    public void setMotdePasse(String motdePasse)
     {
-        return nom;
+        this.motdePasse = motdePasse;
     }
 
-    public String getPrenom()
+    public String getIdUtilisateur()
     {
-        return prenom;
+        return idUtilisateur;
     }
 
-    public String getDescription()
+    public void setIdUtilisateur(String idUtilisateur)
     {
-        return description;
+        this.idUtilisateur = idUtilisateur;
     }
 
-    public void setProfil(String profil)
+    public String getNomProprietaire()
     {
-        this.profil = profil;
+        return nomProprietaire;
     }
 
-
-    public void setPrenom(String prenom)
+    public void setNomProprietaire(String nomProprietaire)
     {
-        this.prenom = prenom;
+        this.nomProprietaire = nomProprietaire;
     }
 
-    public void setNom(String nom)
+    public String getPrenomProprietaire()
     {
-        this.nom = nom;
+        return prenomProprietaire;
     }
 
-    public void setDescription(String description)
+    public void setPrenomProprietaire(String prenomProprietaire)
     {
-        this.description = description;
+        this.prenomProprietaire = prenomProprietaire;
+    }
+
+    public String getDescriptionUtilisateur()
+    {
+        return descriptionUtilisateur;
+    }
+
+    public void setDescriptionUtilisateur(String descriptionUtilisateur)
+    {
+        this.descriptionUtilisateur = descriptionUtilisateur;
     }
 }

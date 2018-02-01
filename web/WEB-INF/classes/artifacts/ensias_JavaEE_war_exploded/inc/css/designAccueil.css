@@ -206,6 +206,7 @@ div.body
     margin-top: -10px;
     text-align: center ;
     top: 0 ;
+
     margin-left: -13px;
     margin-right: -11px;
     background-color: #e7e7e7;
@@ -231,7 +232,7 @@ div.body
 /* Style the links inside the navigation bar */
 .topnav a {
     height:50px;
-    width: 25%;
+    width: 50%;
     float: left;
     color: #00255a;
     text-align: center;
@@ -250,4 +251,17 @@ div.body
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
+}
+div#ajoutEleve
+{
+    font-size: 14px;
+    font-style: normal;
+    font-family: "American Typewriter";
+    display: block ;
+    margin-left: 150px;
+    text-align: center ;
+}
+div.form-group
+{
+    margin-bottom: 50px;
 }

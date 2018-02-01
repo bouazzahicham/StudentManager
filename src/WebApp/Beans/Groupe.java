@@ -7,7 +7,8 @@ package WebApp.Beans;
 public class Groupe {
 
     Integer idGroupe;
-    String nomGroupe,descriptionGroupe;
+    String nomGroupe,
+            descriptionGroupe;
     public Integer getIdGroupe() {
         return idGroupe;
     }

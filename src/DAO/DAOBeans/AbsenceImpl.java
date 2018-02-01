@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class AbsenceImpl {
@@ -39,10 +40,43 @@ public class AbsenceImpl {
 				}
 			}catch (SQLException e) {
 			e.printStackTrace();
-			} 
-		 
-		return absences;
+			}
+        try
+        {
+            con.close();
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+        return absences;
 	}
-	
+	public void insererAbsence(ArrayList<Integer> ids,Integer idseance)
+	{
+		int statut ;
+		try {
+			con=df.getConnection();
+			Iterator mine=ids.iterator();
+			while(mine.hasNext())
+			{
+				st=con.prepareStatement("update gestionseance set Absent=? where  idEleve=? and idSeance=?");
+				st.setInt(1, 1);
+				st.setInt(2,(int)mine.next());
+				st.setInt(3, idseance);
+				statut  =st.executeUpdate();
+			}
+
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+        try
+        {
+            con.close();
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+    }
 
 }

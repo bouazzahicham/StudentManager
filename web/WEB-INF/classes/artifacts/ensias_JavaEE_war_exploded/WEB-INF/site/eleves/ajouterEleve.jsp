@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-	<title>Gestion des eleves  </title>
+    <title>Gestion des eleves  </title>
 </head>
 
 <%--J'ai remplace index par Gestion--%>
@@ -15,70 +15,90 @@
     <div class="topnav">
         <a href="<c:url value="/gestionEleve?Rechercher"/>">Rechercher</a>
         <a  href="<c:url value="/gestionEleve?Ajouter"/>" >Ajouter</a>
-        <a href="">Contact</a>
-        <a href="#about">About</a>
     </div>
-
 </article>
-<form class="form-horizontal" action="<c:url value="/gestionEleve"/>">
-    <form class="form-horizontal">
+
+<div id="ajoutEleve">
+    <form class="form-horizontal" method="post" action="<c:url value="/gestionEleve"/>" >
         <fieldset>
-
             <!-- Form Name -->
-            <legend>Form Name</legend>
+            <legend style="margin-bottom: 30px;"><u>Ajout d'un étudiant dans la base de donnée : </u></legend>
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Text Input</label>
+                <label class="col-md-4 control-label" for="textinput">Nom : </label>
                 <div class="col-md-4">
-                    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-                    <span class="help-block">help</span>
-                </div>
-            </div>
+                    <input name="nomEleve" id="nomEleve" name="textinput" type="text" placeholder="Nom de l'élève" class="form-control input-md">
 
-            <!-- Button (Double) -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="button1id">Double Button</label>
-                <div class="col-md-8">
-                    <button id="button1id" name="button1id" class="btn btn-success">Good Button</button>
-                    <button id="button2id" name="button2id" class="btn btn-danger">Scary Button</button>
-                </div>
-            </div>
-
-            <!-- Multiple Radios -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="radios">Multiple Radios</label>
-                <div class="col-md-4">
-                    <div class="radio">
-                        <label for="radios-0">
-                            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-                            Option one
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="radios-1">
-                            <input type="radio" name="radios" id="radios-1" value="2">
-                            Option two
-                        </label>
-                    </div>
                 </div>
             </div>
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput">Text Input</label>
+                <label class="col-md-4 control-label" for="prenom">Prenom :</label>
                 <div class="col-md-4">
-                    <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-                    <span class="help-block">help</span>
+                    <input id="prenomEleve" name="prenomEleve" type="text" placeholder="Prenom de l'eleve" class="form-control input-md">
+
                 </div>
             </div>
 
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="dateNaissance">Date de naissance : </label>
+                <div class="col-md-4">
+                    <input id="dateNaissance" name="dateNaissance" type="text" placeholder="" class="form-control input-md">
+                    <span class="help-block">format : JJ-MM-AAAA</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="telephone">Telephone :</label>
+                <div class="col-md-4">
+                    <input id="telephone" name="telephone" type="text" placeholder="" class="form-control input-md">
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="description">Description : </label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="description" name="description">Une description si necessaire sur l'étudiant </textarea>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="ville">Ville actuelle : </label>
+                <div class="col-md-4">
+                    <input id="ville" name="ville" type="text" placeholder="" class="form-control input-md">
+
+                </div>
+            </div>
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectGroupe">Choix du groupe : </label>
+                <div class="col-md-6">
+
+                    <select id="selectGroupe" name="selectGroupe" class="form-control">
+                        <c:forEach var="groupe" items="${groupeListe}" varStatus="varstatus">
+                            <option value="${groupe.idGroupe}">${groupe.nomGroupe}</option>
+                        </c:forEach>
+                    </select>
+
+
+                </div>
+            </div>
         </fieldset>
+        <input style="margin-left: 100px;" type="submit" id="ajouterEleve" value="Ajouter cette eleve" onclick="alert('L\'eleve ajouté avec succes ! ');" />
+
+        <input type="hidden" name="ajouterEleve" value="ajouterEleve"   >
     </form>
 
 
+</div>
+
 </body>
-
-
 
 </html>
