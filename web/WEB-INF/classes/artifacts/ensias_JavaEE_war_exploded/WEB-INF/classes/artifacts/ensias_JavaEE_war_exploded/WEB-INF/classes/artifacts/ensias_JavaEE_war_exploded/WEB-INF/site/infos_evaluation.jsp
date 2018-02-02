@@ -5,14 +5,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src=" https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+
 	<style>
 		.switch {
 			position: relative;
@@ -119,12 +120,13 @@
 			-o-transition: All 0.3s ease;
 		}
 	</style>
-	<title>NAHLA IS LOVE</title>
+	<title>Informations evaluation </title>
 </head>
 <body>
 
 
 <article class="rightArticle">
+	<%--Compte temporaire pour acceder --%>
 	<div class="container">
         <h1> RESULTATS</h1>
 
@@ -139,11 +141,11 @@
 				</c:forEach>
 			</c:if>
 		</select>
-			Veuillez choisir une �valuation:		   <select class="form-control" name="evaluations" id="evaluations">
+			Veuillez choisir une evaluation:		   <select class="form-control" name="evaluations" id="evaluations">
 			<option></option>
 			<c:if test="${not empty evaluations}">
-				<c:forEach  items="${evaluations}" var="evaluation" >
-					<option value="${evaluation.idEvaluation}">${evaluation.domaine}(${evaluation.dateEvaluation})</option>
+				<c:forEach  items="${evaluations}" var="evaluation" varStatus="status">
+					<option id="${status.count}" value="${evaluation.idEvaluation}">${evaluation.domaine}(${evaluation.dateEvaluation})</option>
 				</c:forEach>
 			</c:if>
 		</select>
@@ -152,7 +154,7 @@
 
 
 		<br><br>
-		<h3><b>S�l�ctionn�: Groupe <a href=""  id="mine"></a>/ S�ance du<a href="" id="mo"> </a></b></h3>
+		<h3><b>Selectionnez  le  Groupe :  <a href=""  id="mine"></a>/ Seance du <a href="" id="mo"> </a></b></h3>
 		<table id="example"  class="table table-striped table-bordered" width="100%" cellspacing="0">
 
 			<thead>
@@ -194,6 +196,13 @@
         });
 	</script>
 
+		<script>
+            $(document).ready(function(){
+                $("#groupetds").change(function(){
+                    $("#0").val('0');
+                });
+            });
+		</script>
 
 
 	<script type="text/javascript">

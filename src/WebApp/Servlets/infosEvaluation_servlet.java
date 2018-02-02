@@ -32,7 +32,6 @@ public class infosEvaluation_servlet extends HttpServlet
         this.eva_eleves=daofact.getevaluationImpl();
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        mysession=request.getSession();
 
         request.setAttribute("groupes",groupes.lister());
         request.setAttribute("evaluations",evaluations.lister());
@@ -41,16 +40,21 @@ public class infosEvaluation_servlet extends HttpServlet
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if(request.getParameter("groupetds")!=null && request.getParameter("evaluations")!=null)
+        String a = request.getParameter("groupetds") ;
+        String b= request.getParameter("evaluations") ;
+
+        if(a !=null &&  !a.isEmpty()  &&  b != null && !b.isEmpty())
         {
-            idGroupe=Integer.parseInt(request.getParameter("groupetds"));
-            idevaluation=Integer.parseInt(request.getParameter("evaluations"));
+            idGroupe=Integer.parseInt(a);
+            idevaluation=Integer.parseInt(b);
             request.setAttribute("grselect", idGroupe);
             request .setAttribute("evselect", idevaluation);
             request.setAttribute("eleves", eva_eleves.lister_groupe(idGroupe,idevaluation));
         }
 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);
+
+        doGet(request,response);
+//        this.getServletContext().getRequestDispatcher("/WEB-INF/site/infos_evaluation.jsp").forward(request, response);
     }
 
 }

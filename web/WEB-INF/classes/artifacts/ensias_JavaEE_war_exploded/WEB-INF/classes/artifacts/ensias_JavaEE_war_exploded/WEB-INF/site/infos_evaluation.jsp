@@ -134,18 +134,18 @@
 
 		<form method="post" action="infosevaluation" id="evaluation">
 			Veuillez choisir un groupe:		 <select class="form-control" name="groupetds" id="groupetds" >
-			<option></option>
-			<c:if test="${not empty groupes}">
+            <option value=""></option>
+            <c:if test="${not empty groupes}">
 				<c:forEach  items="${groupes}" var="group" >
 					<option value="${group.idGroupe}">${group.nomGroupe}</option>
 				</c:forEach>
 			</c:if>
 		</select>
 			Veuillez choisir une evaluation:		   <select class="form-control" name="evaluations" id="evaluations">
-			<option></option>
-			<c:if test="${not empty evaluations}">
-				<c:forEach  items="${evaluations}" var="evaluation" >
-					<option value="${evaluation.idEvaluation}">${evaluation.domaine}(${evaluation.dateEvaluation})</option>
+            <option value=""></option>
+            <c:if test="${not empty evaluations}">
+				<c:forEach  items="${evaluations}" var="evaluation" varStatus="status">
+					<option id="${status.count}" value="${evaluation.idEvaluation}">${evaluation.domaine}(${evaluation.dateEvaluation})</option>
 				</c:forEach>
 			</c:if>
 		</select>
@@ -154,7 +154,7 @@
 
 
 		<br><br>
-		<h3><b>Selectionnez  le  Groupe :  <a href=""  id="mine"></a>/ S�ance du<a href="" id="mo"> </a></b></h3>
+		<h3><b>Selectionnez  le  Groupe :  <a href=""  id="mine"></a>/ Seance du <a href="" id="mo"> </a></b></h3>
 		<table id="example"  class="table table-striped table-bordered" width="100%" cellspacing="0">
 
 			<thead>
@@ -196,6 +196,13 @@
         });
 	</script>
 
+		<script>
+            $(document).ready(function(){
+                $("#groupetds").change(function(){
+                    $("#evaluations").val("");
+                });
+            });
+		</script>
 
 
 	<script type="text/javascript">

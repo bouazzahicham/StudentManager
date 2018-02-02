@@ -81,18 +81,17 @@ public class EvaluationImpl {
         }catch (SQLException e){
             e.printStackTrace();
         }
-        finally
+
+        try
         {
-            try
-            {
-                con.close();
-            } catch (SQLException e)
-            {
-                e.printStackTrace();
-            }
-
-
+            con.close();
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
         }
+
+
+
 
         return Evaluations;
     }

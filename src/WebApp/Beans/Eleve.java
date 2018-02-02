@@ -7,7 +7,20 @@ public class  Eleve{
     private Integer idGroupe ;
     private String telephoneEleve;
 
+    private Integer pointsMaxEvaluation;
+
+    public Integer getPointsMaxEvaluation()
+    {
+        return pointsMaxEvaluation;
+    }
+
+    public void setPointsMaxEvaluation(Integer pointsMaxEvaluation)
+    {
+        this.pointsMaxEvaluation = pointsMaxEvaluation;
+    }
+
     public Integer getIdEleve()
+
     {
         return idEleve;
     }
